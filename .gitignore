@@ -1,0 +1,45 @@
+# Laravel
+/vendor/
+node_modules/
+public/storage
+storage/*.key
+.env
+.env.*.backup
+homestead.json
+homestead.yaml
+
+# Docker
+docker-compose.override.yml
+docker-compose.override.*.yml
+docker/*.env
+docker/db_data/
+docker/nginx/*.conf
+docker/php/*.log
+
+# Ignorar arquivos gerados pelo IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+
+# Logs e cache
+*.log
+*.cache
+storage/framework/sessions/*
+storage/framework/views/*
+storage/framework/cache/*
+storage/logs/*
+
+# Ignorar arquivos de debug e temporários
+*.phpunit.result.cache
+.phpunit.cache/
+*.gz
+*.tmp
+
+# Ignorar arquivos de uploads
+/public/uploads
+
+# Arquivos de testes locais
+phpunit.xml
+phpunit.xml.dist
