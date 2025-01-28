@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Infrastructure\Repositories;
+namespace Src\Infrastructure\Repositories;
 
-use App\Core\Entities\User as DomainUser;
-use App\Core\Interfaces\UserRepositoryInterface;
+use Src\Core\Entities\User as DomainUser;
+use Src\Core\Interfaces\User\UserRepositoryInterface;
 use App\Models\User as EloquentUser;
 
 class UserRepository implements UserRepositoryInterface

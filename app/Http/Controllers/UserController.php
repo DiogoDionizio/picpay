@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use App\Core\UseCases\CreateUser\CreateUserUseCase;
-use App\Core\UseCases\CreateUser\CreateUserInputDTO;
-use App\Http\Requests\CreateUserRequest;
+use Illuminate\Http\Request;
+use Src\Core\UseCases\User\CreateUser\CreateUserUseCase;
+use Src\Core\UseCases\User\CreateUser\CreateUserInputDTO;
 
 class UserController extends Controller
 {
     public function __construct(private CreateUserUseCase $createUserUseCase) {}
 
-    public function store(CreateUserRequest $request)
+    public function store(Request $request)
     {
         $inputDTO = new CreateUserInputDTO(
             $request->name,

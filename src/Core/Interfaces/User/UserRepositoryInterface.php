@@ -1,6 +1,8 @@
 <?php
-namespace App\Core\Interfaces;
-use App\Core\Entities\User;
+namespace Src\Core\Interfaces\User;
+
+use Src\Core\Entities\User;
+
 interface UserRepositoryInterface
 {
     public function save(User $user): User;

@@ -1,5 +1,5 @@
 <?php
-namespace App\Core\Entities;
+namespace Src\Core\Entities;
 class User
 {
     public function __construct(

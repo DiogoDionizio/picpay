@@ -1,10 +1,10 @@
 <?php
-namespace App\Core\UseCases\CreateUser;
+namespace Src\Core\UseCases\User\CreateUser;
 
-use App\Core\Entities\User;
-use App\Core\Interfaces\UserRepositoryInterface;
-use App\Core\UseCases\CreateUser\CreateUserInputDTO;
-use App\Core\UseCases\CreateUser\CreateUserOutputDTO;
+use Src\Core\Entities\User;
+use Src\Core\Interfaces\User\UserRepositoryInterface;
+use Src\Core\UseCases\User\CreateUser\CreateUserInputDTO;
+use Src\Core\UseCases\User\CreateUser\CreateUserOutputDTO;
 
 class CreateUserUseCase
 {
