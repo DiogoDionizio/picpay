@@ -12,8 +12,18 @@ class CreateUserUseCase
 
     public function execute(CreateUserInputDTO $input): CreateUserOutputDTO
     {
-        $user = new User($input->name, $input->email, bcrypt($input->password));
+        $user = new User(
+            $input->fullName,
+            $input->document,
+            $input->email,
+            bcrypt($input->password),
+            $input->typeUser
+        );
         $savedUser = $this->userRepository->save($user);
-        return new CreateUserOutputDTO($savedUser->name, $savedUser->email);
+        return new CreateUserOutputDTO(
+            $savedUser->fullName,
+            $savedUser->email,
+            $savedUser->typeUser
+        );
     }
 }

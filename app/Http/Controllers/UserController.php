@@ -13,9 +13,11 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $inputDTO = new CreateUserInputDTO(
-            $request->name,
+            $request->fullName,
+            $request->document,
             $request->email,
-            $request->password
+            $request->password,
+            $request->typeUser
         );
 
         $outputDTO = $this->createUserUseCase->execute($inputDTO);

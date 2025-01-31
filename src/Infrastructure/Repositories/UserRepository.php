@@ -11,11 +11,18 @@ class UserRepository implements UserRepositoryInterface
     public function save(DomainUser $user): DomainUser
     {
         $eloquentUser = EloquentUser::create([
-            'name' => $user->name,
+            'name' => $user->fullName,
+            'document' => $user->document,
             'email' => $user->email,
             'password' => $user->password,
         ]);
 
-        return new DomainUser($eloquentUser->name, $eloquentUser->email, $eloquentUser->password);
+        return new DomainUser(
+            $eloquentUser->fullName,
+            $eloquentUser->document,
+            $eloquentUser->email,
+            $eloquentUser->password,
+            $eloquentUser->typeUser,
+        );
     }
 }
